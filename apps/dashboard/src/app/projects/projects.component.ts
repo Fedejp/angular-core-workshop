@@ -29,6 +29,7 @@ export class ProjectsComponent implements OnInit {
       approved: true,
     }
   ];
+  primaryColor = "purple"
   selectedProject; //declaracion
   constructor() { }
 
