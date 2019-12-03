@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@workshop/material';
 import { CustomersComponent } from './customers/customers.component';
+import { HomeModule } from './home/home.module';
+import { ProjectsModule } from './projects/projects.module';
+import { CustomersModule } from './customers/customers.module';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { CustomersComponent } from './customers/customers.component';
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HomeModule,
+    ProjectsModule,
+    CustomersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
