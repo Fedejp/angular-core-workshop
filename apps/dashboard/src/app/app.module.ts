@@ -4,10 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '@workshop/material';
+import { CustomersComponent } from './customers/customers.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CustomersComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
