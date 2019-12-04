@@ -8,6 +8,8 @@ import { CustomersComponent } from './customers/customers.component';
 import { HomeModule } from './home/home.module';
 import { ProjectsModule } from './projects/projects.module';
 import { CustomersModule } from './customers/customers.module';
+import { AppRoutingModule } from './app-routing.module';
+import { UiLoginModule } from '@workshop/ui-login';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { CustomersModule } from './customers/customers.module';
     MaterialModule,
     HomeModule,
     ProjectsModule,
-    CustomersModule
+    CustomersModule,
+    AppRoutingModule,
+    UiLoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

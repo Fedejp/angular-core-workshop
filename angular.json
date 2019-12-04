@@ -202,31 +202,6 @@
         }
       }
     },
-    "ui-login": {
-      "root": "libs/ui-login",
-      "sourceRoot": "libs/ui-login/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ui-login/tsconfig.lib.json",
-              "libs/ui-login/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/ui-login/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ui-login/jest.config.js",
-            "tsConfig": "libs/ui-login/tsconfig.spec.json"
-          }
-        }
-      }
-    },
     "ui-toolbar": {
       "root": "libs/ui-toolbar",
       "sourceRoot": "libs/ui-toolbar/src",
@@ -249,6 +224,37 @@
             "jestConfig": "libs/ui-toolbar/jest.config.js",
             "tsConfig": "libs/ui-toolbar/tsconfig.spec.json"
           }
+        }
+      }
+    },
+    "ui-login": {
+      "projectType": "library",
+      "root": "libs/ui-login",
+      "sourceRoot": "libs/ui-login/src",
+      "prefix": "ui",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-login/tsconfig.lib.json",
+              "libs/ui-login/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui-login/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-login/jest.config.js",
+            "tsConfig": "libs/ui-login/tsconfig.spec.json",
+            "setupFile": "libs/ui-login/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }
